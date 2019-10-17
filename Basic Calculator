@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float S1 , S2 , Sonuc;
+    char islem;
+    printf ("Birinci sayiyi giriniz: ");
+    scanf ("%f",&S1);
+    printf("Ikinci sayiyi giriniz: ");
+    scanf("%f",&S2);
+    fflush(stdin);
+    printf("Islem isaretini giriniz: ");
+    scanf ("%c",&islem);
+    if (islem=='+')
+    {
+        Sonuc = S1 + S2;
+    }
+    else if (islem=='-')
+    {
+        Sonuc = S1 - S2;
+    }
+    else if (islem=='/')
+    {
+        Sonuc = S1 / S2;
+    }
+    else if (islem=='*')
+    {
+        Sonuc = S1 * S2;
+    }
+    else
+    {
+        printf("Gecersiz islem girdiniz");
+        return 0;
+    }
+    printf("Sonuc = %0.2f",Sonuc);
+    return 0;
+}
